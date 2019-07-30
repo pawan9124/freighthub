@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap"); /* LOGO */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Lobster", cursive;
+  background-image: url("../images/background-header.jpg");
+  background-position: center;
+  height: 200px;
+  position: relative;
+}
+header h1 {
+  font-size: 4.5rem;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+header .overlay {
+  height: 200px;
+  top: 0px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.filter-margin {
+  margin-top: 10px;
+}
+
+/* Home page */
+.home-page,
+.shipment-detail {
+  padding: 15px;
+}
+
+.status-code {
+  padding: 10px;
+  float: right;
+}
+.shipment-card {
+  max-width: 540px;
+}
+.cargo-table {
+  display: inline-table;
+}
+.services-table {
+  display: none;
+}
+.no-border {
+  border: 0px !important;
+}
+.custom-font-size {
+  font-size: 65px;
+  margin: 12px;
+}
+div.pager {
+  text-align: center;
+  margin: 1em 0;
+}
+
+div.pager span {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8;
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #07c;
+  margin-right: 0.5em;
+}
+
+div.pager span.active {
+  background: #07c;
+  color: white;
+}
+
+.pagination {
+  display: inline;
+}
+
+/* Neon Light effect */
+
+.neon-bg {
+  position: relative;
+}
+
+.neon {
+  position: absolute;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 42%); */
+  margin: 0;
+  padding: 0 4px;
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 0 0 4px #ff005b;
+}
+.neon a {
+  color: #fff !important;
+}
+.neon:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+
+.neon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  filter: blur(40px);
+}
+.table-responsive {
+  display: inline-table;
+}
+.front-design {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+.nav-item {
+  cursor: pointer;
+}
+.error {
+  border: 1px solid red;
+}
+.mgb-10 {
+  margin-bottom: 10px;
+}
+.red-error {
+  color: red;
+  left: 10%;
+  position: relative;
+}
+.card-text {
+  color: #6b6565;
+}
+
+/* Media query */
+
+@media screen and (max-width: 760px) {
+  .table-responsive {
+    display: block;
+  }
+}

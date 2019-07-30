@@ -1,0 +1,34 @@
+To Start the application:
+
+Webserver start at http://localhost:4000
+ClientServer start at http://localhost:3000
+
+
+---> I have used concurrenlty to run the both server parallel by
+step 1: cd freigthub repository
+step 2. npm install
+step 3. npm start 
+
+Start server at two ports
+
+
+=================== TO RUN PROTRACTOR TEST CASE ===========================
+
+Requirements:-
+
+Protractor.js
+Java(JDK)
+
+1. To run locally 
+
+ step 1: npm install
+ step 2: npm run test
+
+ // configuration is set on firefox browser so if you required have fire fox 
+// for google if version is greater than 75 then it will run but to run for chrome 
+
+--> visit conf.test.js
+--> and change broswername:'chrome'
+
+
+Please feel free to ask if something is not working at pawan_saket@rediffmail.com
