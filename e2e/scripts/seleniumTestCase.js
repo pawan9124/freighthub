@@ -53,7 +53,7 @@ describe("App visiting site flow", function() {
           '//*[@id="root"]/div/div/div[2]/div[1]/div/div/div/div[1]/div/input'
         )
       )
-      .sendKeys(" New Name Test");
+      .sendKeys("New Name Test");
     browser.sleep(600);
     browser.driver
       .findElement(

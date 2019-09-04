@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap"); /* LOGO */
+@import url("https://fonts.googleapis.com/css?family=Rochester&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -33,21 +36,346 @@ header .overlay {
 a,
 a:hover {
   text-decoration: none;
+  cursor: pointer;
+  color: #d1d1d1;
 }
 .filter-margin {
   margin-top: 10px;
 }
+/******************* Landing page ******************/
+.light-nav.navbar {
+  display: flex;
+  border-bottom-width: thin;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-nav.navbar {
+  display: flex;
+  border-bottom-width: thin;
+  border-bottom: 1px solid rgba(138, 138, 138, 0.2);
+}
+.nav-child:nth-child(1) {
+  flex: 4;
+}
+.nav-child:nth-child(2) {
+  flex: 3;
+  display: flex;
+}
+.nav-child:nth-child(3) {
+  flex: 1;
+  display: flex;
+}
+.nav-child h1 {
+  font-family: "Rochester", cursive;
+  font-size: 2.2em;
+  color: #d1d1d1;
+}
 
+.nav-child ul {
+  margin: auto;
+}
+.light-nav .nav-child ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px;
+}
+.light-nav .nav-child ul li a {
+  color: #d1d1d1;
+}
+.dark-nav .nav-child ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px;
+}
+.dark-nav .nav-child ul li a {
+  color: #8a8a8a;
+}
+
+.btn-primary-custom {
+  padding: 6px 30px;
+  background-color: #cd1859;
+  border-radius: 30px;
+  color: white;
+}
+.btn-primary-custom a {
+  text-decoration: none;
+  color: white;
+}
+.btn-md {
+  padding: 6px 20px;
+}
+
+.li-active {
+  color: white !important;
+  border-bottom: 4px solid #cd1859;
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -125px;
+  position: relative;
+}
+.landing-page .overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-box {
+  height: 300px;
+  width: 350px;
+  background-color: white;
+  z-index: 2;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.signup-box-child {
+  flex: 1;
+  text-align: center;
+}
+.signup-box-child span {
+  display: inline-block;
+  top: 20%;
+  position: relative;
+}
+.signup-box-child span a {
+  color: #444;
+}
+.signup-box-child span:nth-child(1) {
+  border-right: 2px solid #cd1859;
+  padding-right: 10%;
+}
+.signup-box-child span:nth-child(2) {
+  padding-left: 10%;
+}
+.singup-box-active {
+  color: #cd1859 !important;
+}
+
+.signup-input-box {
+  border: none;
+  border-bottom: 2px solid #cd1859;
+  width: 80%;
+  margin: 20px;
+}
+.button-singup div {
+  width: 30%;
+  position: relative;
+  left: 35%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.landing-qoutes {
+  left: 10%;
+  top: 15%;
+  position: absolute;
+}
+.landing-qoutes h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+.landing-qoutes .upper-border {
+  width: 5%;
+  border: 2px solid #cd1859;
+  position: relative;
+  top: 15px;
+}
+
+.landing-page-qoutes-parent {
+  display: flex;
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.landing-page-qoutes-media {
+  background-color: #cd1859;
+  display: flex;
+  flex: 1;
+  order: 2;
+}
+.landing-page-qoutes-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #d1d1d1;
+  padding: 25px;
+  flex: 2;
+  order: 1;
+}
+.common-icon-lg {
+  font-size: 80px;
+  color: #d1d1d1;
+  margin: auto;
+}
+.common-icon-sm {
+  font-size: 50px;
+  color: #d1d1d1;
+  margin: auto;
+}
+.media-card-text {
+  margin: auto;
+}
+/*********************************************************
+                        HOME PAGE
+*********************************************************/
+.user-card-parent {
+  display: flex;
+  width: 200px;
+  height: 50px;
+}
+.user-card-media {
+  background-color: #cd1859;
+  display: flex;
+  flex: 1;
+  order: 1;
+}
+.user-card-text {
+  background-color: #e5e5e5;
+  display: flex;
+  color: #8a8383;
+  flex: 2;
+  order: 2;
+}
+.info-card-parent {
+  background-color: #e5e5e5;
+  color: #8a8383;
+  width: 300px;
+  height: 75px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  float: right;
+}
+.info-ul-list {
+  list-style: none;
+}
+.margin-top-3-per {
+  margin-top: 3%;
+}
+.search-panel-parent {
+  display: flex;
+}
+.search-id-box {
+  border-radius: 10px;
+  width: 100%;
+  height: 35px;
+}
+.circle-button-primary {
+  padding: 6px 8px;
+  background-color: #cd1859;
+  color: white !important;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.table {
+  color: #8a8383;
+}
+.table .thead-dark th {
+  background-color: #e5e5e5;
+  color: #8a8383;
+  border-color: #e5e5e5;
+}
+/********************** SHIPMENT CONTAINER **********************************/
+
+.shipment-info-parent {
+  display: flex;
+  margin: 15px;
+  flex: 100%;
+}
+.shipment-info-child {
+  border: 1px solid rgba(138, 131, 131, 0.2);
+  padding: 10px;
+  border-width: thin;
+}
+.shipment-info-child:nth-child(1) {
+  flex: 1;
+}
+.shipment-info-child:nth-child(2) {
+  flex: 2;
+}
+.shipment-info-child:nth-child(3) {
+  flex: 1;
+}
+.user-card-parent-details {
+  display: flex;
+  width: 380px;
+  height: 100px;
+}
+.user-card-media-details {
+  flex: 1;
+  background-color: #cd1859;
+  color: white;
+  font-size: 20px;
+  display: flex;
+}
+.user-card-media-details i {
+  margin: auto;
+}
+.user-card-text-details {
+  flex: 2;
+  color: #8a8a8a;
+  background-color: #e5e5e5;
+  display: flex;
+}
+.user-card-text-details .media-card-text {
+  margin: auto;
+  flex-direction: column;
+}
+.shipment-name-button-container {
+  display: flex;
+}
+.shipment-name-button-container .btn-primary-custom {
+  margin-left: 20px;
+}
+.shipment-name-button-container .shipment-input-box {
+  flex: 0.9;
+}
+.status-code {
+  color: #6eed5a;
+  float: left;
+}
+.status-code:hover {
+  color: #6eed5a;
+}
+.shipment-information {
+  margin: 15px;
+  border: 1px solid rgba(138, 131, 131, 0.2);
+  border-width: thin;
+  padding: 15px;
+}
+.margin-top-15 {
+  margin-top: 15px;
+}
+.margin-0 {
+  margin: 0px;
+}
+.save-button-group {
+  display: flex;
+}
+
+/*********************************************************/
 /* Home page */
 .home-page,
 .shipment-detail {
   padding: 15px;
 }
 
-.status-code {
-  padding: 10px;
-  float: right;
-}
 .shipment-card {
   max-width: 540px;
 }
@@ -77,12 +405,12 @@ div.pager span {
   text-align: center;
   cursor: pointer;
   color: #000;
-  border: 1px solid #07c;
+  border: 1px solid #cd1859;
   margin-right: 0.5em;
 }
 
 div.pager span.active {
-  background: #07c;
+  background: #cd1859;
   color: white;
 }
 

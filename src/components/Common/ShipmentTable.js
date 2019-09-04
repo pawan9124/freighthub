@@ -3,16 +3,11 @@ import { Link } from "react-router-dom";
 import { fetchSingleShipment } from "../../actions/shipmentsActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-// import callPagination from "../../scripts/pagination";
-// import bundle from "./pagination.bundle.js";
+import callPagination from "../../scripts/pagination";
 
 class ShipmentTable extends Component {
   componentDidUpdate() {
-    import(
-      /* webpackChunkName: "callPagination" */ "../../scripts/pagination"
-    ).then(function(pagination) {
-      pagination.default();
-    });
+    callPagination();
   }
   viewShipmentDetails(id) {
     this.props.fetchSingleShipment(id);
@@ -34,7 +29,7 @@ class ShipmentTable extends Component {
             <Link
               onClick={this.viewShipmentDetails.bind(this, data.id)}
               to={`/shipment/${data.id}`}
-              className="btn btn-primary"
+              className="btn btn-primary-custom btn-md"
             >
               View
             </Link>

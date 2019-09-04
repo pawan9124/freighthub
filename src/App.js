@@ -1,15 +1,14 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import { hot } from "react-hot-loader";
-const Home = lazy(() => import("./components/Home/Home"));
-const ShipmentContainer = lazy(() =>
-  import("./components/ShipmentDetails/ShipmentContainer")
-);
+import Home from "./components/Home/Home";
+import Landing from "./components/Layout/Landing";
+import ShipmentContainer from "./components/ShipmentDetails/ShipmentContainer";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
-
+import Navigation from "./components/Common/Navigation";
 //Library load
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -21,15 +20,16 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <Suspense fallback={<h4>Loading...</h4>}>
-            <Header />
-            <Route exact path="/" component={Home} />
-            <Switch>
-              <Route exact path="/shipment/:id" component={ShipmentContainer} />
-            </Switch>
-            <Footer />
-          </Suspense>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+          </Switch>
+
+          <Switch>
+            <Route exact path="/dashboard" component={Home} />
+            <Route exact path="/shipment/:id" component={ShipmentContainer} />
+          </Switch>
         </Router>
+        <Footer />
       </Provider>
     );
   }

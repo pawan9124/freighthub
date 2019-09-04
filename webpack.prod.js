@@ -9,14 +9,13 @@ module.exports = {
   entry: {
     app: "./src/index.js"
   },
+  devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: process.env.PORT || 4000,
     publicPath: "http://localhost:4000/dist/",
-    hotOnly: true,
-    historyApiFallback: true
+    hotOnly: true
   },
-
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -64,7 +63,6 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/dist/"
   }

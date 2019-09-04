@@ -21,9 +21,6 @@ class SearchBox extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col-md-3 filter-margin">
-            <label>{this.props.label}</label>
-          </div>
           <div className="col-md-7">
             <div className="input-group mb-3">
               <input

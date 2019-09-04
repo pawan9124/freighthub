@@ -4,15 +4,10 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const devMode = process.env.NODE_ENV === "development";
-
 module.exports = {
-  mode: devMode ? "development" : "production",
+  mode: "development",
   entry: {
     app: "./src/index.js"
-  },
-  stats: {
-    warnings: false
   },
   devtool: "inline-source-map",
   devServer: {
@@ -70,7 +65,6 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/dist/"
   }

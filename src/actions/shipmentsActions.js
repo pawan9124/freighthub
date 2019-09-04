@@ -12,7 +12,7 @@ const headers = {
 };
 
 export const fetchAllShipment = () => dispatch => {
-  Axios.get(`http://localhost:3000/shipments`)
+  Axios.get(`http://localhost:3001/shipments`)
     .then(res => {
       dispatch({
         type: GET_ALL_SHIPMENT_DETAILS,
@@ -28,7 +28,7 @@ export const fetchAllShipment = () => dispatch => {
 };
 
 export const fetchSingleShipment = id => dispatch => {
-  Axios.get(`http://localhost:3000/shipments/${id}`)
+  Axios.get(`http://localhost:3001/shipments/${id}`)
     .then(res => {
       dispatch({
         type: GET_SINGLE_SHIPMENT_DETAILS,
@@ -44,7 +44,7 @@ export const fetchSingleShipment = id => dispatch => {
 };
 
 export const postShipmentName = data => dispatch => {
-  Axios.put(`http://localhost:3000/shipments/${data.id}`, data, {
+  Axios.put(`http://localhost:3001/shipments/${data.id}`, data, {
     headers: headers
   })
     .then(res => {
